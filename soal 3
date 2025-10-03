@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+string lampuLaluLintas(int t) {
+    int waktu = (t + 58) % 103;
+    if (waktu < 3) return "Kuning";
+    else if (waktu < 83) return "Merah";
+    else return "Hijau";
+}
+
+int main() {
+    int t;
+    cout << "Masukkan detik: ";
+    cin >> t;
+
+    cout << "Lampu pada detik " << t << " adalah: " << lampuLaluLintas(t) << endl;
+    return 0;
+}
